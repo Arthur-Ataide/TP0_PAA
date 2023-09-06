@@ -1,17 +1,16 @@
 #include "../Include/funcao.h"
 
 
-void menu1(int* tipoFigura, int* quantFigura){
-    
+void menu(int* tipoFigura, int* quantFigura){  
 
     printf("PROGRAMA GERADOR DE OBRA DE ARTE:\n");
     printf("=================================\n");
     printf("Escolha o tipo de figura basica a ser usada para criar a obra:\n");
     printf("1 - Asterisco simples * \n");
-    printf("2 - Simbolo de soma com asteriscos + \n");
+    printf("2 - Simbolo de soma feita de asteriscos + \n");
     printf("3 - Letra X com asteriscos X \n");
     printf("4 - Figuras aleatorias \n");
-    printf("5 - Tetris \n\n");
+    printf("5 - \033[0;35mT\033[0m\033[0;34me\033[0m\033[0;33mt\033[0m\033[0;31mr\033[0m\033[0;32mi\033[0m\033[0;36ms\033[0m\n\n");
 
     printf("Digite o tipo de figura basica desejada: ");
     scanf("%d", tipoFigura);
@@ -20,12 +19,18 @@ void menu1(int* tipoFigura, int* quantFigura){
 
     printf("Digite a quantidade de figuras desejada: ");
     scanf("%d", quantFigura);
-
     if (*quantFigura <= 0 ){
-        *quantFigura = (rand()%2);
-        printf("quantidade = %d", *quantiFigura);
+        *quantFigura = (rand()%100)+1;
     }
-    
+
+    else if (*quantFigura > 100){
+        *quantFigura = 100;
+    }
+
+    if (*tipoFigura < 1 || *tipoFigura > 5){
+        *tipoFigura = 5;
+    }
+
 }
 
 
@@ -231,7 +236,7 @@ int figuras(char matriz[][M],int i,int j, int tipoFigura){
     return 1;
 }
 
-void random(char matriz[][M], int quantFigura, int tipoFigura){
+void randomizar(char matriz[][M], int quantFigura, int tipoFigura){
     int i, j, cont, linha, coluna;
     
     cont = 0;
@@ -244,10 +249,37 @@ void random(char matriz[][M], int quantFigura, int tipoFigura){
 
             }
         } 
+    printf("\nA quantidade de figuras a ser gerada foi %d\n", quantFigura);
 }
 
 void print_matriz(char matriz[][M], int tipoFigura){
     int i, j;
+
+    printf("\nA figura gerada foi: \n\n");
+
+    switch (tipoFigura){
+    case 1:
+        printf("Asterisco simples * \n");
+        break;
+    
+    case 2:
+        printf("Simbolo de soma feita de asteriscos + \n");
+        break;
+
+    case 3:
+        printf("Letra X com asteriscos X \n");
+        break;
+
+    case 4:
+        printf("Figuras aleatorias \n");
+
+    case 5:
+        printf("\033[0;35mT\033[0m\033[0;34me\033[0m\033[0;33mt\033[0m\033[0;31mr\033[0m\033[0;32mi\033[0m\033[0;36ms\033[0m\n\n");
+        break;
+
+    default:
+        break;
+    }
 
     printf("\n");
     

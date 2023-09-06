@@ -9,10 +9,10 @@ int main(){
 
     while (continuar)
     {
-        menu1(&tipoFigura, &quantFigura);
+        menu(&tipoFigura, &quantFigura);
         quadro(matriz);
 
-        random(matriz, quantFigura, tipoFigura);
+        randomizar(matriz, quantFigura, tipoFigura);
 
         print_matriz(matriz, tipoFigura);
 

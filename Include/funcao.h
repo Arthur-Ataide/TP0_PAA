@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include <conio.h>
 
 #define M 80
 #define N 20
@@ -19,9 +18,9 @@
 #endif
 
 
-void menu1(int* tipoFigura, int* quantFigura);
+void menu(int* tipoFigura, int* quantFigura);
 int tetris(char matriz[][M], int i, int j);
 void quadro(char matriz[][M]);
-void random(char matriz[][M], int quantFigura, int tipoFigura);
+void randomizar(char matriz[][M], int quantFigura, int tipoFigura);
 int figuras(char matriz[][M], int i, int j, int tipoFigura);
 void print_matriz(char matriz[][M], int tipoFigura);
