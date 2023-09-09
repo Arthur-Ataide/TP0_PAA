@@ -3,13 +3,13 @@
 
 void escolha(int* continuar){
     pausar_tela();
-        limpar_tela();
-        
-        printf("Deseja continuar? (1 - Sim / 0 - Nao): ");
-        scanf("%d", continuar);
+    limpar_tela();
+    
+    printf("Deseja continuar? (1 - Sim / 0 - Nao): ");
+    scanf("%d", continuar);
 
-        pausar_tela();
-        limpar_tela();
+    pausar_tela();
+    limpar_tela();
 }
 
 
