@@ -7,8 +7,7 @@ int main(){
     char matriz[N][M];
     int continuar = 1;
 
-    while (continuar)
-    {
+    while (continuar){
         menu(&tipoFigura, &quantFigura);
         quadro(matriz);
 
@@ -16,7 +15,7 @@ int main(){
 
         print_matriz(matriz, tipoFigura);
 
-        pausar_tela();
-        limpar_tela();
+        escolha(&continuar);
+        
     }
 }

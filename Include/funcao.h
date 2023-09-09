@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <time.h>
 
 #define M 80
 #define N 20
@@ -17,7 +16,7 @@
 #define pausar_tela() printf("\nPress any key to continue..."); limpar_input(); getchar();
 #endif
 
-
+void escolha(int* continuar);
 void menu(int* tipoFigura, int* quantFigura);
 int tetris(char matriz[][M], int i, int j);
 void quadro(char matriz[][M]);

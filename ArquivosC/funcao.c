@@ -1,9 +1,21 @@
 #include "../Include/funcao.h"
 
 
+void escolha(int* continuar){
+    pausar_tela();
+        limpar_tela();
+        
+        printf("Deseja continuar? (1 - Sim / 0 - Nao): ");
+        scanf("%d", continuar);
+
+        pausar_tela();
+        limpar_tela();
+}
+
+
 void menu(int* tipoFigura, int* quantFigura){  
 
-    printf("PROGRAMA GERADOR DE OBRA DE ARTE:\n");
+    printf("\nPROGRAMA GERADOR DE OBRA DE ARTE:\n");
     printf("=================================\n");
     printf("Escolha o tipo de figura basica a ser usada para criar a obra:\n");
     printf("1 - Asterisco simples * \n");
