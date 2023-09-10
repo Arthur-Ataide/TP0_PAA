@@ -284,6 +284,7 @@ void print_matriz(char matriz[][M], int tipoFigura){
 
     case 4:
         printf("Figuras aleatorias \n");
+        break;
 
     case 5:
         printf("\033[0;35mT\033[0m\033[0;34me\033[0m\033[0;33mt\033[0m\033[0;31mr\033[0m\033[0;32mi\033[0m\033[0;36ms\033[0m\n\n");
