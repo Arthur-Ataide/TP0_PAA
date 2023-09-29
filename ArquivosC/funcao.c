@@ -12,7 +12,6 @@ void escolha(int* continuar){
     limpar_tela();
 }
 
-
 void menu(int* tipoFigura, int* quantFigura){  
 
     printf("\nPROGRAMA GERADOR DE OBRA DE ARTE:\n");
@@ -44,7 +43,6 @@ void menu(int* tipoFigura, int* quantFigura){
     }
 
 }
-
 
 void quadro(char matriz[][M]){
     int i, j;
@@ -199,7 +197,6 @@ int tetris(char matriz[][M], int i, int j){
 
     }
 }
-
 
 int figuras(char matriz[][M],int i,int j, int tipoFigura){
     int Erro = 0;
